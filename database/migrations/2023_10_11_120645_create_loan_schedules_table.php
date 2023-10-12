@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('loan_schedules', function (Blueprint $table) {
             $table->id();
-            $table->string('month_number');
-            $table->string('starting_balance');
-            $table->string('monthly_payment');
-            $table->string('principal_component');
-            $table->string('interest_component');
-            $table->string('ending_balance');
+            $table->integer('data_id');
+            $table->date('date_of_payment');
+            $table->integer('month_number');
+            $table->decimal('starting_balance', 10, 2);
+            $table->decimal('monthly_payment', 10, 2);
+            $table->decimal('principal_component', 10, 2);
+            $table->decimal('interest_component', 10, 2);
+            $table->decimal('ending_balance', 10, 2);
             $table->timestamps();
         });
     }

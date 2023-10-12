@@ -14,7 +14,7 @@
 
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="p-3 mb-4 bg-dark text-light rounded-3">
                 <div class="container-fluid py-5">
                     <form method="POST" action="{{ route('calculate') }}">
@@ -30,7 +30,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="interest_rate" class="form-label">Annual Interest Rate</label>
+                            <label for="interest_rate" class="form-label">Annual Interest Rate <small class="text-danger fw-bold">%</small></label>
                             <input type="number" class="form-control @error('interest_rate') is-invalid @enderror" name='interest_rate' id="interest_rate"  placeholder="ex. 10%" required>
                             @error('interest_rate')
                                 <span class="invalid-feedback" role="alert">
@@ -87,31 +87,6 @@
                     </form>  
                 </div>
             </div>  
-        </div>
-
-        <div class="col-md-8">
-            <div class="p-3 mb-4 bg-dark text-light rounded-3">
-                <table class="table table-dark table-striped text-center">
-                    <thead>
-                        <tr>
-                          <th scope="col">Month Number</th>
-                          <th scope="col">Starting Balance</th>
-                          <th scope="col">Monthly Payment</th>
-                          <th scope="col">Principal</th>
-                          <th scope="col">Interest</th>
-                          <th scope="col">Remaining balance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
 
     </div>

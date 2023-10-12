@@ -10,6 +10,8 @@ class LoanSchedule extends Model
     use HasFactory;
 
     protected $fillable = [
+        'data_id',
+        'date_of_payment',
         'month_number',
         'starting_balance',
         'monthly_payment',
